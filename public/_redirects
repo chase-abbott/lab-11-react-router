@@ -1,2 +1,2 @@
-/api/  https://guarded-bayou-23606.herokuapp.com/api
+/api/*  https://guarded-bayou-23606.herokuapp.com/api/:splat
 /*    /index.html   200
