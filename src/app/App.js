@@ -6,7 +6,8 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect
+  Redirect,
+  Link
 } from 'react-router-dom';
 import './App.css';
 
@@ -18,7 +19,7 @@ class App extends Component {
         <Router>
           <Header/>
           <main>
-
+           
             <Switch>
               <Route path="/" exact={true}
                 render={routerProps => (
@@ -26,13 +27,13 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/resources" exact={true}
+              <Route path="/players" exact={true}
                 render={routerProps => (
                   <div>Implement a page of resources</div>
                 )}
               />
 
-              <Route path="/resources/:id"
+              <Route path="/players/:id"
                 render={routerProps => (
                   <div>Implement a page for id {routerProps.match.params.id}</div>
                 )}

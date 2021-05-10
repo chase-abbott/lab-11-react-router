@@ -1,9 +1,18 @@
 .Header {
-  padding: 20px;
+  padding: 10px;
   border-bottom: 1px solid lightgray;
+  background: #FEE11A;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-gap: 5px;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bold;
+  justify-self: center;
+}
+
+.Header a {
+  align-self: flex-end;
 }
