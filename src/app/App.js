@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import PlayerPage from '../list/PlayerPage';
+import PlayerDetail from '../detail/PlayerDetail';
 import {
   BrowserRouter as Router,
   Route,
@@ -36,7 +37,7 @@ class App extends Component {
 
               <Route path="/players/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <PlayerDetail {...routerProps}/>
                 )}
               />
 
