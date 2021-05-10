@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { getPlayers } from '../api/players-api';
+import PlayerList from '../list/PlayerList';
 import './PlayerPage.css';
 
 export default class PlayerPage extends Component {
@@ -19,10 +20,12 @@ export default class PlayerPage extends Component {
  }  
   
  render() {
+   const { players } = this.state;
    const { isLoading } = this.state;
    return (
      <div className="PlayerPage">
-       { isLoading && <div class="loader"></div>}
+       { isLoading && <div className="loader"></div>}
+       <PlayerList players={players}/>
      </div>
    );
  }
