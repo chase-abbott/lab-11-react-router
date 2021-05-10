@@ -2,12 +2,13 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import PlayerPage from '../list/PlayerPage';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
-  Link
+
 } from 'react-router-dom';
 import './App.css';
 
@@ -29,7 +30,7 @@ class App extends Component {
 
               <Route path="/players" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <PlayerPage {...routerProps}/>
                 )}
               />
 
