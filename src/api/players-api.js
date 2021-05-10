@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'http://localhost:8001/api/players';
+const URL = '/api/players';
 
 export async function getPlayers() {
   const response = await request.get(URL);
