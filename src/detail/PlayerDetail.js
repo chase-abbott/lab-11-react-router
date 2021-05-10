@@ -27,7 +27,7 @@ export default class PlayerDetail extends Component {
     return (
       <div className="PlayerDetail">
         <h2> {player.name} </h2>
-        <img src={player.url_image}></img>
+        <img src={player.url_image} alt={player.name}></img>
       </div>
     );
   }
