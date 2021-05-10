@@ -10,7 +10,7 @@ export default class PlayerItem extends Component {
       <div className="PlayerItem">
         <li className="PlayerListElement" >
           <h2> {player.name} </h2>
-          {/* <img src={player.url_image} alt={player.name}></img> */}
+          <img src={player.url_image} alt={player.name}></img>
           <h4> {player.position}</h4>
           <h4> Enrolled: {player.yearEnrolled}</h4> 
           { player.isTransfer && <h4 className="transfer"> Transfer </h4>}
