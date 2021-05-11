@@ -1,0 +1,32 @@
+.PlayerItem {
+        display: flex;
+        flex-direction: column;
+        
+        border-radius: 2%;
+      }
+.PlayerListElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PlayerItem:hover {
+          transform: scale(1.03);
+          box-shadow: 3px 2px 2px rgb(80, 78, 78);
+          background: white;
+      }
+      
+.PlayerItem img {
+    max-height: 80%;
+    width: 100%;
+    max-width: 80%;
+    object-fit: contain;
+      }
+      
+.PlayerItem h4 {
+          margin: 0;
+      }
+      
+ a { 
+          text-decoration: none;
+          color: black;
+      }

@@ -1,5 +1,6 @@
 {
   "name": "foundations-2-react-template",
+  "proxy": "http://localhost:8001/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

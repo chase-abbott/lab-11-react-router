@@ -2,11 +2,14 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import PlayerPage from '../list/PlayerPage';
+import PlayerDetail from '../detail/PlayerDetail';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect
+  Redirect,
+
 } from 'react-router-dom';
 import './App.css';
 
@@ -18,7 +21,7 @@ class App extends Component {
         <Router>
           <Header/>
           <main>
-
+           
             <Switch>
               <Route path="/" exact={true}
                 render={routerProps => (
@@ -26,15 +29,15 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/resources" exact={true}
+              <Route path="/players" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <PlayerPage {...routerProps}/>
                 )}
               />
 
-              <Route path="/resources/:id"
+              <Route path="/players/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <PlayerDetail {...routerProps}/>
                 )}
               />
 
