@@ -15,9 +15,14 @@ export async function getPlayerById(id) {
 }
 
 export async function addPlayer(player) {
-  console.log(player);
   const response = await request.post(URL).send(player);
 
+
+  return response.body;
+}
+
+export async function deletePlayer(id) {
+  const response = await request.delete(`${URL}/${id}`);
 
   return response.body;
 }

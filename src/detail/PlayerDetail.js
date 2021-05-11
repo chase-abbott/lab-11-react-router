@@ -1,11 +1,12 @@
 import { Component } from 'react';
-import { getPlayerById } from '../api/players-api';
+import { getPlayerById, deletePlayer } from '../api/players-api';
 
 import './PlayerDetail.css';
 
 export default class PlayerDetail extends Component {
   state = {
-    player: null
+    player: null,
+    loading: false
   }
 
   async componentDidMount() {
@@ -16,12 +17,30 @@ export default class PlayerDetail extends Component {
       this.setState({ player : player });
     }
   }
+
+  handleDelete = async () => {
+    const { history } = this.props;
+    const { player } = this.state;
+    const confirmation = `Are you sure you want to delete ${player.name}?`;
+
+    if (!window.confirm(confirmation)) { return; }
+
+    try {
+      this.setState({ loading : true });
+      await deletePlayer(player.id);
+      history.push('/players');
+
+    }
+    catch (err){
+      this.setState({ loading : false });
+      console.log(err.message);
+    }
+  }
  
   render() {
     const { player } = this.state;
    
     if (!player) return null;
-    console.log(player.name);
    
     return (
       <div className="PlayerDetail">
@@ -34,6 +53,7 @@ export default class PlayerDetail extends Component {
           { !player.isTransfer && <h4 className="signee"> Signee </h4>}
           { player.isActive && <h4 className="active"> Active</h4>}
           { !player.isActive && <h4 className="graduated"> Graduated </h4>}
+          <button onClick={this.handleDelete}> Delete Player </button>
         </div>
       </div>
     );
