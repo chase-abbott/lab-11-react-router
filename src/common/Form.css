@@ -1,7 +1,26 @@
 .Form {
   background: #FEE11A;
-  max-width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+}
+
+input, select {
+  width: 150%;
+}
+
+span {
+  font-size: 1rem;
+}
+
+p > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: auto auto;
 }
