@@ -5,10 +5,15 @@ export default class Form extends Component {
   state = {
     name:'Chase',
     position: 'Quarterback',
-    image: 'chase.jpeg',
+    url_image: 'chase.jpeg',
     yearEnrolled: 1994,
     isTransfer: false,
     isActive: false,
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.onSubmit(this.state);
   }
 
   handleChangeName = ({ target }) => {
@@ -20,7 +25,7 @@ export default class Form extends Component {
   }
 
   handleChangeImage = ({ target }) => {
-    this.setState({ image : target.value });
+    this.setState({ url_image : target.value });
   }
 
   handleChangeYear = ({ target }) => {
@@ -36,9 +41,9 @@ export default class Form extends Component {
   }
 
   render() {
-    const { name, image, yearEnrolled } = this.state;
+    const { name, url_image, yearEnrolled } = this.state;
     return (
-      <form className="Form">
+      <form className="Form" onSubmit={this.handleSubmit}>
 
         <p>
           <label>
@@ -69,7 +74,7 @@ export default class Form extends Component {
           <label>
             <span>Player Image</span>
             <input name="image" required placeholder="Image URL"
-              value={image} onChange={this.handleChangeImage}/>
+              value={url_image} onChange={this.handleChangeImage}/>
           </label>
         </p>
 
@@ -100,6 +105,8 @@ export default class Form extends Component {
             </span>
           </label>
         </p>
+
+        <button> Add a Player </button>
       </form>
     );
   }

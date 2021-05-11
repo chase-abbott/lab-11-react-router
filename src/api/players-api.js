@@ -13,3 +13,11 @@ export async function getPlayerById(id) {
 
   return response.body;
 }
+
+export async function addPlayer(player) {
+  console.log(player);
+  const response = await request.post(URL).send(player);
+
+
+  return response.body;
+}

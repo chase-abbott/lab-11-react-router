@@ -3,11 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  
+  width: 60vw;
 }
 
-input, select {
+input{
   width: 150%;
+}
+
+select {
+  min-width: 225%;
 }
 
 span {
@@ -18,6 +23,10 @@ p > label {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+p {
+  margin: 10px;
 }
 
 .checkbox {
