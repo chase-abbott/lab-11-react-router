@@ -24,8 +24,10 @@ export default class PlayerAddPage extends Component {
   }
 
   render() {
+    const { loading } = this.state;
     return (
       <div className="PlayerAddPage">
+        { loading && <div className="loading"></div>}
         <h3> Add Player </h3>
         <Form onSubmit={this.handleAdd}/>
       </div>

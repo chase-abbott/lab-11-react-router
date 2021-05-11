@@ -38,12 +38,13 @@ export default class PlayerDetail extends Component {
   }
  
   render() {
-    const { player } = this.state;
+    const { player, loading } = this.state;
    
     if (!player) return null;
    
     return (
       <div className="PlayerDetail">
+        { loading && <div className="loading"></div>}
         <div className="ContainerDiv">
           <h2> {player.name} </h2>
           <img src={player.url_image} alt={player.name}></img>
