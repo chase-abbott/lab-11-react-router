@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import PlayerPage from '../list/PlayerPage';
 import PlayerDetail from '../detail/PlayerDetail';
+import PlayerAddPage from '../add/PlayerAddPage';
 import {
   BrowserRouter as Router,
   Route,
@@ -32,6 +33,12 @@ class App extends Component {
               <Route path="/players" exact={true}
                 render={routerProps => (
                   <PlayerPage {...routerProps}/>
+                )}
+              />
+
+              <Route path="/players/add" exact={true}
+                render={routerProps => (
+                  <PlayerAddPage {...routerProps}/>
                 )}
               />
 
