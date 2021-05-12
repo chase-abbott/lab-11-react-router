@@ -9,7 +9,9 @@ export default class Home extends Component {
       <div className="Home">
         <h2>Home Page</h2>
 
-        <Link to='/players'>See the List</Link>
+        <Link to='/players'>
+          <img src="/o.png" alt="oregon o"></img>
+        </Link>
       </div>
     );
   }

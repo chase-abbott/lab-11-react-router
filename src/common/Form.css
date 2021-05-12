@@ -1,0 +1,35 @@
+.Form {
+  background: #FEE11A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 60vw;
+}
+
+input{
+  width: 150%;
+}
+
+select {
+  min-width: 225%;
+}
+
+span {
+  font-size: 1rem;
+}
+
+p > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin: 10px;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: auto auto;
+}
